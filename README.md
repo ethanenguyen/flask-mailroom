@@ -2,6 +2,7 @@
 
 Running at [http://gentle-spire-17793.herokuapp.com/donations/]
 (http://gentle-spire-17793.herokuapp.com/donations/).
+> Extra implementation of adding donation logic. Check for blank name and amount, if either is true show an error message and show the form submission again.  If a user enters a name that _does not exist_ in the database of donors, add the new donor to the database and show a warning message.  I'm using flash "message" to show the warning and error message.  However, flash "message" band doesn't show color nor the "x" button is functional
 
 ## Your Task
 
@@ -14,8 +15,7 @@ Your task is to:
   * You should create a route and a handler function inside of `main.py`. The handler function should accept both GET requests and POST requests.
     * If the handler receives a GET request, then it should render the template for the donation creation page.
     * If the handler receives a POST request (a form submission), then it should attempt to retrieve the name of the donor and the amount of the donation from the form submission. It should retrieve the donor from the database with the indicated name, and create a new donation with the indicated donor and donation amount. Then it should redirect the visitor to the home page.
-    * > Extra implementation of adding donation logic. Check for blank name and amount, if either is true show an error message and show the form submission again.  If a user enters a name that _does not exist_ in the database of donors, add the new donor to the database and show a warning message.  I'm using flash "message" to show the warning and error message.  However, flash "message" band doesn't show color nor the "x" button is functional
-
+    
 2. Add navigation elements in `base.jinja2` to the top of both pages. The navigation elements should include links to both the home page and your new donation-creation page.
 
 3. Publish your work to Heroku. If you publish your work to Heroku and then make changes to your application, you will need to publish those changes by commiting your work to your git repository and then executing `git push heroku master`. Make sure that you also `git push origin master` to push your changes to GitHub.
